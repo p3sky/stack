@@ -30,7 +30,7 @@ jobs:
 
       - checkout # check out source code to working directory
 
-      - run: shiftleft code-scan -s ./
+      - run: shiftleft code-scan -s ./ -r -2003 -e 6f06e123-06b8-4a52-9430-a333d624225e
 
   IaC-Assessment:
 
@@ -42,7 +42,7 @@ jobs:
 
       - checkout
 
-      - run: shiftleft iac-assessment -i terraform -p ./terraform-template -r -64
+      - run: shiftleft iac-assessment -i terraform -p ./terraform-template -r -64  -e 6f06e123-06b8-4a52-9430-a333d624225e 
 
   Image-Scan:
 
